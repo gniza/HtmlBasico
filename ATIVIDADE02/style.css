@@ -1,0 +1,68 @@
+/* Seletor de tag: cor de fundo, cor do texto e fonte da página */
+body {
+    background-color: #0b1d3a;
+    color: #e8ecf4;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Agrupamento: todos os títulos com a mesma cor */
+h1,
+h2,
+h3 {
+    color: #ffc94d;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+/* Seletor de id */
+#topo {
+    text-align: center;
+}
+
+/* Seletor de classe */
+.subtitulo {
+    color: #8ecbff;
+    font-style: italic;
+}
+
+a {
+    color: #8ecbff;
+}
+
+/* Box model (margin, padding e border) e propriedades de borda */
+.caixa {
+    background-color: #132b52;
+    margin: 20px;
+    padding: 15px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ffc94d;
+    border-radius: 10px;
+}
+
+/* Imagem e mapa não passam da largura da caixa */
+img,
+iframe {
+    max-width: 100%;
+}
+
+/* Estilização das listas */
+ul {
+    list-style-type: square;
+}
+
+#planetas {
+    list-style-type: upper-roman;
+}
+
+footer {
+    text-align: center;
+}

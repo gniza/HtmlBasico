@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- Aluno: Gabriel Niza Lanssoni (FIZ INDIVIDUAL)-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Viagem</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS interno -->
+    <style>
+        body {
+            margin: 0;
+            background-color: #f2f4f7;
+            color: #1c2430;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Position e flexbox */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1c2430;
+            padding: 15px;
+        }
+
+        h1 {
+            color: #ffd21f;
+            margin: 0;
+            animation: pulsar 2s infinite;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 30px 0 20px;
+        }
+
+        /* Grid com 3 colunas: os 6 cards formam 2 linhas */
+        .produtos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #c9ced6;
+            border-radius: 10px;
+            animation: aparecer 1s;
+            transition: transform 0.3s;
+        }
+
+        /* Hover nos cards */
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .card h3 {
+            margin: 15px 0 5px;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #1c2430;
+            color: #ffffff;
+        }
+
+        /* Animação: os cards aparecem aos poucos ao abrir a página */
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animação: o título aumenta e diminui sem parar */
+        @keyframes pulsar {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Tablet */
+        @media (max-width: 1024px) {
+            .produtos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Celular */
+        @media (max-width: 600px) {
+            .produtos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Loja de Viagem</h1>
+    </header>
+
+    <main>
+        <h2>Produtos</h2>
+
+        <section class="produtos">
+
+            <article class="card">
+                <img src="imagens/mochila.jpg" alt="Mochila de viagem preta">
+                <h3>Mochila</h3>
+                <p>Mochila grande para levar tudo na viagem.</p>
+            </article>
+
+            <article class="card">
+                <img src="imagens/fone.jpg" alt="Fone de ouvido preto">
+                <h3>Fone de ouvido</h3>
+                <p>Fone sem fio para ouvir música no caminho.</p>
+            </article>
+
+            <article class="card">
+                <img src="imagens/camera.jpg" alt="Câmera instantânea azul">
+                <h3>Câmera</h3>
+                <p>Câmera que imprime a foto na hora.</p>
+            </article>
+
+            <article class="card">
+                <img src="imagens/oculos.jpg" alt="Óculos de sol pretos">
+                <h3>Óculos de sol</h3>
+                <p>Óculos pretos para os dias de sol.</p>
+            </article>
+
+            <article class="card">
+                <img src="imagens/relogio.jpg" alt="Relógio de pulso com pulseira preta">
+                <h3>Relógio</h3>
+                <p>Relógio de pulso com pulseira de couro.</p>
+            </article>
+
+            <article class="card">
+                <img src="imagens/tenis.jpg" alt="Tênis cinza">
+                <h3>Tênis</h3>
+                <p>Tênis leve para caminhar o dia todo.</p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Loja fictícia - Atividade 3 de HTML e CSS</p>
+    </footer>
+
+</body>
+</html>
